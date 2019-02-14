@@ -48,7 +48,7 @@
                 </p>
               </div>
               <div class="input-field col s12">
-                <input type="text" id="date" class="datepicker" value="11.02.2019">
+                <input type="text" id="date" class="datepicker">
                 <label id="date" for="date">When did you watch it?</label>
               </div>
               <input type="submit" value="Add the Movie" id="buttonn" class="btn grey">
@@ -89,7 +89,10 @@
   </div>
   <script src="app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+<script>
+const Calendar = document.querySelector('.datepicker');
+M.Datepicker.init(Calendar,{});
+</script>
 </body>
 
 </html>

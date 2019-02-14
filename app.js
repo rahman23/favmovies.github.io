@@ -198,3 +198,4 @@ document.querySelector('.clear-tasks').addEventListener('click',
     e.preventDefault();
   });
 
+//Materialize DatePicker
