@@ -1,5 +1,4 @@
 -Save your favourite movies<br>
-
 -Javascript ES6<br>
 -Materialize CSS<br>
 -Stored in Local Storage<br>
