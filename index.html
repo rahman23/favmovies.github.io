@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image" href="img/icon.pnggit add">
+
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>FavMovies</title>
+</head>
+
+<body>
+  <div class="container ">
+
+    <div class="col s12">
+
+      <div id="main" class="card">
+        <div class="card-content">
+          <span class="card-title center-align"><span class="blue-grey-text">Welcome to </span><span
+              class="cyan-text">Fav</span><span class="indigo-text">Movies</span></span>
+
+          <div class="row">
+            <form id="movie-form">
+              <div class="input-field col s12">
+                <input type="text" name="title" id="title" value="Catch Me If You Can">
+                <label id="title-label" for="task">Title</label>
+
+
+              </div>
+              <div class="input-field col s12">
+
+                <input type="text" name="year" id="year" value="2002">
+                <label id="year-label" for="year">Release Year</label>
+              </div>
+
+
+              <div class="input-field col s12">
+                <p class="range-field">
+                  <label id="rating" for="rating">Rating</label>
+                  <input type="range" id="rating" min="0" max="100" value="85" />
+
+                </p>
+              </div>
+              <div class="input-field col s12">
+                <input type="text" id="date" class="datepicker" value="11.02.2019">
+                <label id="date" for="date">When did you watch it?</label>
+              </div>
+              <input type="submit" value="Add the Movie" id="buttonn" class="btn grey">
+
+            </form>
+          </div>
+
+
+          <div id="loader">
+            <h4 class="center-align">Loading...</h4>
+            <div class="progress">
+
+              <div class="indeterminate"></div>
+            </div>
+          </div>
+
+          <div id="results">
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Release Year</th>
+                  <th>Rating</th>
+                  <th>When did I watch it?</th>
+                </tr>
+              </thead>
+
+              <tbody id="movie-list"></tbody>
+            </table>
+            <a href="#" class="clear-tasks btn red">Clear All</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+</html>

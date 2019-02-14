@@ -1,0 +1,38 @@
+.card-title{
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+}
+
+#results{
+  display:none;
+  margin-bottom: 10px;
+}
+
+.success, .error{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 550;
+  padding: 5px;
+  margin: 5px 0 15px 0;
+}
+
+.success{
+  color: green;
+}
+
+.error{
+  
+  color:red;
+}
+body{
+  background-color: #3e3e3e18;
+}
+
+label{
+  font-size: 1.2rem !important;
+}
+
+
+.message{ 
+  padding: 2px;  
+}
