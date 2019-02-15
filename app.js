@@ -79,7 +79,7 @@ class UI {
       }
     });
   }
-
+  
 }
 
 //Class for Local Storage
