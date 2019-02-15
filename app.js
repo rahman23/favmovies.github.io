@@ -16,7 +16,7 @@ class UI {
     const content = document.createElement('tr');
     //Insert values
     content.innerHTML = `
-        <td>${movie.title}</td>
+        <td id="movie-title">${movie.title}</td>
         <td>${movie.year}</td>
         <td>${movie.rating}</td>
         <td>${movie.dateOfWatch}</td>
@@ -60,6 +60,31 @@ class UI {
     document.getElementById('year').value = '';
     document.getElementById('rating').value = '';
     document.getElementById('date').value = '';
+  }
+
+  filterMovies(e){
+    console.log('Typed');
+    const text = e.target.value.toLowerCase();
+    console.log(text);
+
+  
+    document.querySelectorAll('#movie-title').forEach(function (title) {
+      
+      const t = title.textContent.toLowerCase();
+      // if(text == ''){
+      //   title.parentElement.style.display = 'table-row';
+      //   title.parentElement.style.display = 'table.striped tr';
+      // }
+      if(t.indexOf(text) != -1){
+       title.parentElement.style.display = 'table-row';
+      //  title.parentElement.className = 'table.striped tr'
+        console.log(title.parentElement);
+      } else {
+        title.parentElement.style.display = 'none';
+      }
+    });
+    
+   
   }
 }
 
@@ -198,4 +223,11 @@ document.querySelector('.clear-tasks').addEventListener('click',
     e.preventDefault();
   });
 
-//Materialize DatePicker
+
+//Filter Movies
+document.querySelector('#filter').addEventListener('keyup',
+function (e) {
+  const ui = new UI();
+   ui.filterMovies(e);
+   e.preventDefault();
+});
