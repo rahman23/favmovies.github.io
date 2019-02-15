@@ -62,30 +62,24 @@ class UI {
     document.getElementById('date').value = '';
   }
 
-  filterMovies(e){
-    console.log('Typed');
+  filterMovies(e) {
+    //Typed filter value to lowercase
     const text = e.target.value.toLowerCase();
-    console.log(text);
-
-  
+    //Get All movie titles
     document.querySelectorAll('#movie-title').forEach(function (title) {
-      
+      //Title in lowercase     
       const t = title.textContent.toLowerCase();
-      // if(text == ''){
-      //   title.parentElement.style.display = 'table-row';
-      //   title.parentElement.style.display = 'table.striped tr';
-      // }
-      if(t.indexOf(text) != -1){
-       title.parentElement.style.display = 'table-row';
-      //  title.parentElement.className = 'table.striped tr'
-        console.log(title.parentElement);
+      if (t.indexOf(text) != -1) {
+        //if =-1 there is no match if !=-1 ther is match
+        // default display value is 'table-row'
+        title.parentElement.style.display = 'table-row';
       } else {
+        //hide it
         title.parentElement.style.display = 'none';
       }
     });
-    
-   
   }
+
 }
 
 //Class for Local Storage
